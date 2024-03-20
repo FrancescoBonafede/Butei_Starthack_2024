@@ -12,7 +12,11 @@ export default {
     get_available_routes() {
         return {
             // AUTH
-            "login": { path: "api/auth/login", method: "POST", auth: false, session: true },
+            "forecast": {
+                path: "https://services.cehub.syngenta-ais.com/api/Forecast/ShortRangeForecastHourly?{string}",
+                method: "GET",
+                auth: true
+            },
         };
     },
 
@@ -20,7 +24,8 @@ export default {
         for (const key in param) {
             route_path = route_path.replace(`{${key}}`, param[key]);
         }
-        let _url = this.get_base_url() + '/' + route_path;
+        // let _url = this.get_base_url() + '/' + route_path;
+        let _url = route_path;
         return _url;
     },
 
@@ -40,9 +45,9 @@ export default {
         };
         
         if (route.auth) {
-            const _token = mainStore.computed.baseStore().token;
-            if (!_token) throw new Error('token not found');
-            headers["Authorization"] = `Bearer ${_token}`;
+            // const _token = mainStore.computed.baseStore().token;
+            // if (!_token) throw new Error('token not found');
+            headers["ApiKey"] = `1b49ed5e-3aec-4088-ab02-1ec9efbaf4eb`;
         }
 
         const requestOptions = {
