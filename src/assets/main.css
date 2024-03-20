@@ -1,0 +1,12 @@
+@tailwind base;
+
+
+@layer base {
+  html {
+    color: #313131;
+  } 
+}
+
+@tailwind components;
+@tailwind utilities;
+

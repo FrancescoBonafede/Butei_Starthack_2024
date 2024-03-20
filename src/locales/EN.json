@@ -1,0 +1,14 @@
+{
+    "test_lang": "test eng",
+
+    "name": "name",
+    "surname": "surname",
+    "email": "email",
+    "age": "age",
+    "phone": "phone",
+    "address": "address",
+    "address_number": "address number",
+    "address_city": "city",
+    "address_cap": "postal code",
+    "note": "note"
+}

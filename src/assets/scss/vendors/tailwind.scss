@@ -1,0 +1,24 @@
+.title{
+    @apply text-4xl font-semibold;
+    @media screen and (max-width: 768px) {
+        @apply text-2xl font-semibold
+    }
+}
+.subtitle{
+    @apply text-xl font-semibold
+}
+
+.info-item{
+    @apply flex md:items-center max-md:flex-col gap-1 md:gap-5
+}
+.info-item-large{
+    @apply flex max-md:flex-col gap-1 md:gap-5
+}
+
+.info-col{
+    @apply flex flex-col gap-2
+}
+
+.transition-base{
+    @apply transition-all duration-200 ease-in-out
+}

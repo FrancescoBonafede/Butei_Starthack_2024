@@ -1,0 +1,22 @@
+@import '../css/tailwind.css';
+
+@import './base/base.scss';
+@import './base/transitions.scss';
+@import './base/typography.scss';
+@import './base/variables.scss';
+
+@import './vendors/naive-ui.scss';
+@import './vendors/tailwind.scss';
+
+.hide-scrollbar{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.vanish{
+    opacity: 0 !important;
+    pointer-events: none !important;
+}

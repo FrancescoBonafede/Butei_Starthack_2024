@@ -1,0 +1,16 @@
+{
+    "components": {
+        "Button": {
+            "appearances": {
+                "filled": {
+                    "variantGroups": {
+                        "secondary": {
+                            "backgroundColor": "#FF000D",
+                            "textColor": "#ffffff"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

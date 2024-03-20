@@ -1,0 +1,14 @@
+{
+    "test_lang": "test ita",
+    
+    "name": "nome",
+    "surname": "cognome",
+    "email": "email",
+    "age": "età",
+    "phone": "telefono",
+    "address": "indirizzo",
+    "address_number": "numero civico",
+    "address_city": "città",
+    "address_cap": "codice postale",
+    "note": "nota"
+}

@@ -1,0 +1,157 @@
+// https://uicolors.app/create <-- For color picking and generating shades
+
+// Global Variables
+:root{
+
+    --color-dark: #212121;
+    --color-black: #0F0F0F;
+
+    --color-light: #F5F5F5;
+    --color-white: #E0E0E0;
+
+    --cubic-bezier-ease-in-out: cubic-bezier(.17,.67,.55,1.04);
+
+    
+
+}
+
+// Light Theme
+:root{
+
+    --color-body: #ffffff;
+    --color-background-base: #ffffff;
+    --color-background-50: #fcfcfc;
+    --color-background-100: #f9f9f9;
+
+    --color-card: #EDEDED;
+    --color-card-hover: #d6d6d6;    
+
+    --color-primary: #84cc16;
+    --color-primary-50: #f5fee7;
+    --color-primary-100: #e9fccb;
+    --color-primary-200: #d5f99d;
+    --color-primary-300: #baf264;
+    --color-primary-400: #a0e635;
+    --color-primary-500: #84cc16;
+    --color-primary-600: #68a30d;
+    --color-primary-700: #517c0f;
+    --color-primary-800: #426212;
+    --color-primary-900: #3a5314;
+    --color-primary-950: #1e2e05;
+
+    --color-secondary: #d1ba23;
+    --color-secondary-50: #fafbeb;
+    --color-secondary-100: #f6f7ca;
+    --color-secondary-200: #f0f098;
+    --color-secondary-300: #e7e05d;
+    --color-secondary-400: #dfcf30;
+    --color-secondary-500: #d1ba23;
+    --color-secondary-600: #b3931b;
+    --color-secondary-700: #8f6c19;
+    --color-secondary-800: #77561c;
+    --color-secondary-900: #66481d;
+    --color-secondary-950: #3b260d;
+
+    --color-tertiary: #d66b6b;
+    --color-tertiary-50: #fcf4f4;
+    --color-tertiary-100: #f9e7e7;
+    --color-tertiary-200: #f5d3d3;
+    --color-tertiary-300: #eeb3b3;
+    --color-tertiary-400: #e28787;
+    --color-tertiary-500: #d66b6b;
+    --color-tertiary-600: #be4444;
+    --color-tertiary-700: #9f3636;
+    --color-tertiary-800: #843030;
+    --color-tertiary-900: #6f2d2d;
+    --color-tertiary-950: #3b1414;
+
+
+
+    --color-danger: #fc373a;
+    --color-danger-50: #fff1f1;
+    --color-danger-100: #ffe0e1;
+    --color-danger-200: #ffc6c7;
+    --color-danger-300: #ff9ea0;
+    --color-danger-400: #ff6669;
+    --color-danger-500: #fc373a;
+    --color-danger-600: #ea181c;
+    --color-danger-700: #bd0f12;
+    --color-danger-800: #a31114;
+    --color-danger-900: #871517;
+    --color-danger-950: #4a0506;
+
+    --color-success: #22bb33;
+    --color-success-50: #f0fdf1;
+    --color-success-100: #dcfcdf;
+    --color-success-200: #bcf6c1;
+    --color-success-300: #87ee92;
+    --color-success-400: #4bdd5a;
+    --color-success-500: #22bb33;
+    --color-success-600: #17a226;
+    --color-success-700: #167f22;
+    --color-success-800: #176420;
+    --color-success-900: #15521d;
+    --color-success-950: #052e0b;
+
+    --color-warning: #db7e25;
+    --color-warning-50: #fdf8ed;
+    --color-warning-100: #f8e9cd;
+    --color-warning-200: #f0d297;
+    --color-warning-300: #e9b760;
+    --color-warning-400: #e5a448;
+    --color-warning-500: #db7e25;
+    --color-warning-600: #c25f1d;
+    --color-warning-700: #a1441c;
+    --color-warning-800: #83361d;
+    --color-warning-900: #6c2d1b;
+    --color-warning-950: #3e150a;
+
+    --color-info: #2391b7;
+    --color-info-50: #effbfc;
+    --color-info-100: #d6f1f7;
+    --color-info-200: #b1e2f0;
+    --color-info-300: #5bc0de;
+    --color-info-400: #3faed1;
+    --color-info-500: #2391b7;
+    --color-info-600: #20749a;
+    --color-info-700: #205f7e;
+    --color-info-800: #224f68;
+    --color-info-900: #214358;
+    --color-info-950: #102a3c;
+
+
+    --color-skeleton: #F7F7F7;
+    --color-skeleton-end: #EFEFEF;
+
+}
+
+// Dark Theme
+.dark{
+
+    --color-body: #111;
+    // --color-body: #000000;
+    // --color-background-base: #121212;
+    --color-background-base: #161616;
+    --color-background-50: #292929;
+    --color-background-100: #1d1d1d;
+
+    --color-card: #2c2c2c;
+    --color-card-hover: #242424;
+
+    --color-primary: #c75add;
+    --color-primary-50: #fcf5fe;
+    --color-primary-100: #f8eafd;
+    --color-primary-200: #f1d5f9;
+    --color-primary-300: #e8b4f3;
+    --color-primary-400: #da87eb;
+    --color-primary-500: #c75add;
+    --color-primary-600: #ac39c0;
+    --color-primary-700: #912c9f;
+    --color-primary-800: #782682;
+    --color-primary-900: #64246b;
+    --color-primary-950: #410c46;
+
+    --color-skeleton: #ffffff1f;
+    --color-skeleton-end: #ffffff2e;
+
+}

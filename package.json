@@ -1,0 +1,52 @@
+{
+  "name": "mercurio",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest"
+  },
+  "dependencies": {
+    "@better-scroll/core": "^2.5.1",
+    "@faker-js/faker": "^8.3.1",
+    "@iconify/vue": "^4.1.1",
+    "@popperjs/core": "^2.11.8",
+    "@vicons/antd": "^0.12.0",
+    "@vicons/carbon": "^0.12.0",
+    "@vicons/fa": "^0.12.0",
+    "@vicons/fluent": "^0.12.0",
+    "@vicons/ionicons4": "^0.12.0",
+    "@vicons/ionicons5": "^0.12.0",
+    "@vicons/material": "^0.12.0",
+    "@vicons/tabler": "^0.12.0",
+    "@vuepic/vue-datepicker": "^7.3.0",
+    "@vueuse/core": "^10.6.1",
+    "axios": "^1.6.2",
+    "gsap": "^3.12.5",
+    "moment": "^2.29.4",
+    "pinia": "^2.1.7",
+    "unplugin-auto-import": "^0.16.7",
+    "unplugin-vue-components": "^0.25.2",
+    "v-calendar": "^3.1.2",
+    "vee-validate": "^4.12.2",
+    "vue": "^3.3.4",
+    "vue-i18n": "^9.8.0",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.4.0",
+    "@vue/test-utils": "^2.4.1",
+    "autoprefixer": "^10.4.16",
+    "jsdom": "^22.1.0",
+    "naive-ui": "^2.35.0",
+    "node-sass": "^9.0.0",
+    "postcss": "^8.4.31",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "tailwindcss": "^3.3.5",
+    "vite": "^4.4.11",
+    "vitest": "^0.34.6"
+  }
+}
