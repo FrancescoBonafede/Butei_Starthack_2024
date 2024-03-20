@@ -9,6 +9,10 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import getStarfield from "./getStarfield.js";
 // import { getFresnelMat } from "./getFresnelMat.js";
 
+import earthMap from "@/assets/textures/8081_earthmap10k.jpg";
+import earthSpec from "@/assets/textures/8081_earthspec10k.jpg";
+import earthBump from "@/assets/textures/8081_earthbump10k.jpg";
+
 onMounted(function () {
 	const w = window.innerWidth;
 	const h = window.innerHeight;
@@ -29,9 +33,9 @@ onMounted(function () {
 	const loader = new THREE.TextureLoader();
 	const geometry = new THREE.IcosahedronGeometry(1, detail);
 	const material = new THREE.MeshPhongMaterial({
-		map: loader.load("src/assets/textures/8081_earthmap10k.jpg"),
-		specularMap: loader.load("src/assets/textures/8081_earthspec10k.jpg"),
-		bumpMap: loader.load("src/assets/textures/8081_earthbump10k.jpg"),
+		map: loader.load(earthMap),
+		specularMap: loader.load(earthSpec),
+		bumpMap: loader.load(earthBump),
 		bumpScale: 0.04,
 	});
 	const earthMesh = new THREE.Mesh(geometry, material);
