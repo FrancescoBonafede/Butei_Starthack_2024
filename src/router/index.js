@@ -14,11 +14,6 @@ const router = createRouter({
 				{
 					path: '',
 					name: 'home',
-					component: () => import('@/pages/home/HomeView.vue'),
-				},
-				{
-					path: '/earth',
-					name: 'home',
 					component: () => import('@/pages/home/EarthView.vue'),
 				},
 				{
