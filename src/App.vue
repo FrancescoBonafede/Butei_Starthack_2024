@@ -9,7 +9,7 @@
         :locale="st_base.locale ? st_base.locale : 'it-IT'"
         :date-locale="st_base.date_locale ? st_base.date_locale : 'it-IT'"
     >
-        <n-theme-editor>
+        <!-- <n-theme-editor> -->
             <n-loading-bar-provider>
                 <n-card class="card-theme !bg-body">
 
@@ -27,7 +27,7 @@
 
                 </n-card>
             </n-loading-bar-provider>
-        </n-theme-editor>
+        <!-- </n-theme-editor> -->
     </n-config-provider>
 </div>
 </template>

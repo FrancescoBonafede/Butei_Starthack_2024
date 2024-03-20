@@ -1,6 +1,6 @@
 <template>
 <div class="min-h-screen flex flex-col">
-	<HeaderBar />
+	<!-- <HeaderBar /> -->
 	<!-- <HeaderBar />
 	<BottomBar /> -->
 	<div class="grow flex flex-col">
@@ -10,7 +10,7 @@
 			</Transition>
 		</router-view>
 	</div>
-	<FooterMenu />
+	<!-- <FooterMenu /> -->
 </div>
 </template>
 

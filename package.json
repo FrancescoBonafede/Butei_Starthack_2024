@@ -27,6 +27,7 @@
     "gsap": "^3.12.5",
     "moment": "^2.29.4",
     "pinia": "^2.1.7",
+    "three": "^0.162.0",
     "unplugin-auto-import": "^0.16.7",
     "unplugin-vue-components": "^0.25.2",
     "v-calendar": "^3.1.2",
