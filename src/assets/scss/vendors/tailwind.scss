@@ -22,3 +22,8 @@
 .transition-base{
     @apply transition-all duration-200 ease-in-out
 }
+.wide-scrollbar{
+    &::-webkit-scrollbar {
+        width: 1px;
+    }
+}

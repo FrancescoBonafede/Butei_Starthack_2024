@@ -5,18 +5,41 @@
             <div class="col-span-12">
                 <img class="h-screen object-cover" :src="map">
                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <div class="relative h-[200px] w-[420px] ">
+                    <div
+                        v-if="st_base.selected_crops !== ''"
+                        class="relative h-[200px] w-[420px] "
+                    >
                         <div
                             v-for="(icon, index) in icons"
                             :key="index"
-                            :style="{ top: `${icon.top}px`, left: `${icon.left}px` }"
-                            class="absolute"
+                            :style="{ top: `${icon.top}`, left: `${icon.left}` }"
+                            class="absolute -translate-x-1/2 -translate-y-1/2 text-center cursor-pointer hover:scale-110 transition-base"
+                            @click="st_base.selected_menu = 'crop'"
                         >
-                        <n-icon
-                            size="28"
-                            color="white"
-                            :component="Plant2"
-                        />
+                            <n-icon
+                                size="60"
+                                color="white"
+                                :component="Plant2"
+                            />
+                            <div class="-mt-1 text-center text-white py-[2px] px-4 border-[3px] font-bold text-xl uppercase rounded-full">
+                                {{ st_base.selected_crops }}
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div
+                        v-else
+                        class="relative h-[200px] w-[420px] "
+                    >
+                        <div
+                            class="absolute -translate-x-1/2 -translate-y-[50px] text-center cursor-pointer hover:scale-110 transition-base top-1/2 left-1/2"
+                            @click="st_base.selected_menu = 'crop'"
+                        >
+                            <n-icon
+                                size="60"
+                                color="white"
+                                :component="SnoozeRound"
+                            />
                         </div>
                     </div>
                 </div>
@@ -72,6 +95,9 @@
 import {
     Plant2,
 } from "@vicons/tabler";
+import {
+    SnoozeRound,
+} from "@vicons/material";
 
 import map from "@/assets/imgs/map.png";
 import frame from "@/assets/imgs/frame.png";
@@ -85,33 +111,34 @@ import { useBaseStore } from "@/stores/main"
 let st_base = useBaseStore()
 
 let icons = ref([
-    {top: 10, left: 10},
-    {top: 10, left: 60},
-    {top: 10, left: 110},
-    {top: 10, left: 160},
-    {top: 10, left: 210},
-    {top: 10, left: 260},
-    {top: 10, left: 310},
-    {top: 10, left: 360},
-    {top: 10, left: 410},
-    {top: 10, left: 460},
-    {top: 60, left: 10},
-    {top: 60, left: 60},
-    {top: 60, left: 110},
-    {top: 60, left: 160},
-    {top: 60, left: 210},
-    {top: 60, left: 260},
-    {top: 60, left: 310},
-    {top: 60, left: 360},
-    {top: 60, left: 410},
-    {top: 110, left: 10},
-    {top: 110, left: 60},
-    {top: 110, left: 110},
-    {top: 110, left: 160},
-    {top: 110, left: 210},
-    {top: 110, left: 260},
-    {top: 110, left: 310},
-    {top: 110, left: 360},
+    {top: '40%', left: '50%', size: 70},
+    // {top: 10, left: 10},
+    // {top: 10, left: 60},
+    // {top: 10, left: 110},
+    // {top: 10, left: 160},
+    // {top: 10, left: 210},
+    // {top: 10, left: 260},
+    // {top: 10, left: 310},
+    // {top: 10, left: 360},
+    // {top: 10, left: 410},
+    // {top: 10, left: 460},
+    // {top: 60, left: 10},
+    // {top: 60, left: 60},
+    // {top: 60, left: 110},
+    // {top: 60, left: 160},
+    // {top: 60, left: 210},
+    // {top: 60, left: 260},
+    // {top: 60, left: 310},
+    // {top: 60, left: 360},
+    // {top: 60, left: 410},
+    // {top: 110, left: 10},
+    // {top: 110, left: 60},
+    // {top: 110, left: 110},
+    // {top: 110, left: 160},
+    // {top: 110, left: 210},
+    // {top: 110, left: 260},
+    // {top: 110, left: 310},
+    // {top: 110, left: 360},
 
 ])
 

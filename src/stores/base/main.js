@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import actions from "./action";
 
-import { itIT, dateItIT } from "naive-ui";
+import { enUS, dateEnUS } from "naive-ui";
 
 // ROUTER ----------------------------------------
 import { useRouter, useRoute } from 'vue-router'
@@ -15,7 +15,9 @@ export default defineStore('base', {
     route: useRoute(),
 
     selected_menu: "",
+    partial_selected_crops: "",
     selected_crops: "",
+    money: 400,
 
 
     title: "PINIA Base Store",
@@ -27,8 +29,8 @@ export default defineStore('base', {
     drawer_main_sidebar: false,
 
     theme: "light",
-		locale: itIT,
-		date_locale: dateItIT
+		locale: enUS,
+		date_locale: dateEnUS
   }),
   
   getters: {},

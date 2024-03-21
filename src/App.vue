@@ -132,6 +132,23 @@ onMounted(() => {
     window.addEventListener("resize", () => {
         st_base.vw = window.innerWidth;
     });
+
+    // window listent esc key
+    window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            st_base.selected_menu = ''
+        }
+        if (e.key === "1") {
+            st_base.selected_menu = 'field'
+        }
+        if (e.key === "2") {
+            st_base.selected_menu = 'crop'
+        }
+        if (e.key === "3") {
+            st_base.selected_menu = 'weather'
+        }
+    })
+
 })
     
 </script>
