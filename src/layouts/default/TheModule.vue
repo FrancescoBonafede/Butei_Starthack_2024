@@ -2,7 +2,7 @@
 <div class="min-h-screen flex flex-col">
 
 	<!-- <div class="grow flex flex-col"> -->
-	<div>
+	<div >
 		<router-view class="block h-full" v-slot="{ Component }">
 			<Transition name="fade" mode="out-in">
 				<component class="h-full" :is="Component" />

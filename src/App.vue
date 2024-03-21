@@ -11,21 +11,23 @@
     >
         <!-- <n-theme-editor> -->
             <n-loading-bar-provider>
-                <n-card class="card-theme !bg-body">
-
-                    <Transition name="fade_long" mode="out-in">
-                        <div>
-                            <n-dialog-provider>
-                                <n-message-provider :placement="'top-right'">
-                                    <n-notification-provider >
-                                        <RouterView />
-                                    </n-notification-provider>
-                                </n-message-provider>
-                            </n-dialog-provider>
-                        </div>
-                    </Transition>
-
-                </n-card>
+                <div class="max-w-screen overflow-x-hidden" style="overflow: hidden">
+                    <n-card class="card-theme !bg-body">
+    
+                        <Transition name="fade_long" mode="out-in">
+                            <div>
+                                <n-dialog-provider>
+                                    <n-message-provider :placement="'top-right'">
+                                        <n-notification-provider >
+                                            <RouterView />
+                                        </n-notification-provider>
+                                    </n-message-provider>
+                                </n-dialog-provider>
+                            </div>
+                        </Transition>
+    
+                    </n-card>
+                </div>
             </n-loading-bar-provider>
         <!-- </n-theme-editor> -->
     </n-config-provider>

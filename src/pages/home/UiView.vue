@@ -1,15 +1,15 @@
 <template>
     <div class="flex flex-col justify-between">
         <div class="relative ">
-            <img class="h-[75px] w-[75px] border-[2px] border-green-700 rounded-full ml-5 relative z-[2] shadow-md" :src="avatar" alt="">
-            <div class="absolute top-[25px] left-5 -translate-y-1/2 z-[1] ml-6 pl-[60px] py-2 bg-white border-[2px] border-green-700 w-[160px] shadow-md rounded-lg">
-                <b>Krab Lucci</b>
+            <img class="h-[75px] w-[75px] border-[2px] border-green-700 rounded-full relative z-[2] shadow-md" :src="avatar" alt="">
+            <div class="absolute top-[25px] left-5 -translate-y-1/2 z-[1] ml-2 pl-[60px] py-2 bg-white border-[2px] border-green-700 w-[200px] shadow-md rounded-lg">
+                <b>Crab Lucci</b>
             </div>
             <div class="absolute bottom-[2px] left-12 py-1 px-3 pt-2 pb-[3px] w-[140px] whitespace-nowrap bg-warning-500 text-white" style="border-radius: 0 0 10px 0">
-                <b class="pl-[45px] block">150.00$</b>
+                <b class="pl-[30px] block">150.00$</b>
             </div>
         </div>
-        <div class="flex flex-col  pl-[10px]">
+        <div class="flex flex-col">
 
             <!-- HOME -->
             <div
@@ -132,14 +132,14 @@
                         <n-icon
                             size="15"
                             color="green"
-                            :component="Plant"
+                            :component="Menu"
                         />
                     </div>
                     <div
                         class="label-menu absolute left-5 top-1/2 -translate-y-1/2 z-[1] px-3 py-[0px] bg-[white]/90 whitespace-nowrap border-[2px] border-green-700 rounded-md"
                         :class="st_base.selected_menu === 'bho' ? 'bg-green-700 text-white' : 'text-green-700'"
                     >
-                        <small><b>Bho</b></small>
+                        <small><b>Other</b></small>
                     </div>
                 </div>
             </n-collapse-transition>
@@ -147,28 +147,45 @@
         </div>
         <div
             class="relative cursor-pointer mb-5"
-            @click="st_base.selected_menu = ['weather', 'bho'].includes(st_base.selected_menu) ? '' : 'weather'"
         >
             <div class="relative z-[2] flex justify-center items-center h-[40px] w-[40px] border-[2px] border-green-700 rounded-full bg-[white]/100">
                 <n-icon
                     size="20"
                     color="green"
-                    :component="Info"
+                    :component="Boat"
                 />
             </div>
             <div
                 class="label-menu absolute left-8 top-1/2 -translate-y-1/2 rounded-md z-[1] px-3 py-[2px] bg-[white]/90 whitespace-nowrap border-[2px] border-green-700"
-                :class="['weather', 'bho'].includes(st_base.selected_menu) ? 'bg-green-700 text-white' : 'text-green-700'"
+                @click="showModal = true"
+                @mouseenter="text = 'Time to abbandon ship'"
+                @mouseleave="text = 'Under construction'"
             >
-                <small><b>Info</b></small>
+                <small>
+                    <b>{{ text }}</b>
+                </small>
             </div>
         </div>
+        <n-modal
+            v-model:show="showModal"
+        >
+            <n-card
+                class="container !bg-white px-0"
+            >
+                <video
+                    :src="time"
+                    class="!w-full"
+                    muted autoplay loop
+                ></video>
+            </n-card>
+        </n-modal>
     </div>
 </template>
 
 <script setup>
 
 import avatar from "@/assets/imgs/avatar.jpeg";
+import time from "@/assets/video/video.mp4";
 
 import {
     Home,
@@ -180,13 +197,19 @@ import {
 import {
     Plant,
     Plant2,
+    Speedboat as Boat,
 } from "@vicons/tabler";
+import {
+    OverflowMenuHorizontal as Menu,
+} from "@vicons/carbon";
 
 // PINIA --------------------------------------------------
 import { useBaseStore } from "@/stores/main"
 let st_base = useBaseStore()
 
 let selected = ref("");
+let text = ref("Under construction");
+let showModal = ref(false)
 
 </script>
 

@@ -15,6 +15,7 @@ export default defineStore('base', {
     route: useRoute(),
 
     selected_menu: "",
+    selected_crops: "",
 
 
     title: "PINIA Base Store",
