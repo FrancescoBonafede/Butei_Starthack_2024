@@ -147,6 +147,14 @@ onMounted(() => {
         if (e.key === "3") {
             st_base.selected_menu = 'weather'
         }
+        // freccia sinistra
+        if (e.key === "ArrowLeft") {
+            st_base.field_id = st_base.field_id === 1 ? 1 : st_base.field_id - 1
+        }
+        // freccia destra
+        if (e.key === "ArrowRight") {
+            st_base.field_id = st_base.field_id === 2 ? 2 : st_base.field_id + 1
+        }
     })
 
 })

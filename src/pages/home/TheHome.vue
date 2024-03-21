@@ -3,8 +3,14 @@
         <div class="grid grid-cols-12 max-w-[100vw] !overflow-x-hidden">
     
             <div class="col-span-12">
-                <img class="h-screen object-cover" :src="map">
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <img class="h-screen w-full object-cover" :src="st_base.field_id == 1 ? map : cave" alt="">
+                <div
+                    class="absolute -translate-x-1/2 -translate-y-1/2"
+                    :style="{
+                        top: st_base.field_id == 1 ? '50%' : '50%',
+                        left: st_base.field_id == 1 ? '50%' : '45%'
+                    }"
+                >
                     <div
                         v-if="st_base.selected_crops !== ''"
                         class="relative h-[200px] w-[420px] "
@@ -77,11 +83,25 @@
                             class="h-full w-full object-cover"
                         >
                     </div>
-                    <div
-                        class="label-menu absolute right-8 top-1/2 -translate-y-1/2 z-[1] rounded-md px-3 pr-4 py-[2px] bg-[white]/90 whitespace-nowrap border-[2px] border-green-700"
+                    <n-popselect
+                        v-model:value="st_base.field_id"
+                        :options="[
+                            {
+                                value: 1,
+                                label: 'Campo Borti'
+                            },
+                            {
+                                value: 2,
+                                label: 'Hackaton Field'
+                            }
+                        ]"
                     >
-                        <small class="block pr-5"><b>Campo Borti</b></small>
-                    </div>
+                        <div
+                            class="label-menu absolute right-8 top-1/2 -translate-y-1/2 z-[1] rounded-md px-3 pr-4 py-[2px] bg-[white]/90 whitespace-nowrap border-[2px] border-green-700"
+                        >
+                            <small class="block pr-5"><b>{{ st_base.field_id === 1 ? 'Campo Borti' : 'Hackaton Field' }}</b></small>
+                        </div>
+                    </n-popselect>
                 </div>
             </div>
             <!-- HOME -->
@@ -100,6 +120,7 @@ import {
 } from "@vicons/material";
 
 import map from "@/assets/imgs/map.png";
+import cave from "@/assets/imgs/cave.png";
 import frame from "@/assets/imgs/frame.png";
 
 import EarthView from "./EarthView.vue";
@@ -142,6 +163,14 @@ let icons = ref([
 
 ])
 
+watch(() => st_base.field_id, (newValue, oldValue) => {
+    let old = st_base.fields.find((field) => field.id === oldValue)
+    old.selected_crops = st_base.selected_crops
+    st_base.selected_crops = ''
+    let newField = st_base.fields.find((field) => field.id === newValue)
+    st_base.selected_crops = newField.selected_crops
+    st_base.selected_menu = ''
+})
 
 
 

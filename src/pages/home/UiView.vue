@@ -130,25 +130,6 @@
                     </div>
                 </div>
 
-                <!-- Campo -->
-                <div
-                    class="relative cursor-pointer mb-5 ml-5"
-                    @click="st_base.selected_menu = 'bho'"
-                >
-                    <div class="relative z-[2] flex justify-center items-center h-[30px] w-[30px] border-[2px] border-green-700 rounded-full bg-[white]/100">
-                        <n-icon
-                            size="15"
-                            color="green"
-                            :component="Menu"
-                        />
-                    </div>
-                    <div
-                        class="label-menu absolute left-5 top-1/2 -translate-y-1/2 z-[1] px-3 py-[0px] bg-[white]/90 whitespace-nowrap border-[2px] border-green-700 rounded-md"
-                        :class="st_base.selected_menu === 'bho' ? 'bg-green-700 text-white' : 'text-green-700'"
-                    >
-                        <small><b>Other</b></small>
-                    </div>
-                </div>
             </n-collapse-transition>
             
         </div>

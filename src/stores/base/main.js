@@ -19,6 +19,19 @@ export default defineStore('base', {
     selected_crops: "",
     money: 400,
 
+    fields: [
+      {
+        id: 1,
+        selected_crops: "",
+      },
+      {
+        id: 2,
+        selected_crops: "",
+      }
+    ],
+
+    field_id: 1,
+
 
     title: "PINIA Base Store",
     force_loader: false,
