@@ -39,10 +39,14 @@
                 <!-- name, area, coordinates, acquisition date -->
                 <div class="flex flex-col gap-5">
                     <div>
-                        <h2 class="text-lg font-bold mb-1">Field:</h2>
-                        <p class="text-sm text-gray-500">Area: 10.000 mq</p>
-                        <p class="text-sm text-gray-500">Coordinates: 45.123456, 12.123456</p>
-                        <p class="text-sm text-gray-500">Acquisition date: 01/01/2021</p>
+                        <h2 class="flex flex-col gap-1 mb-4"><b>Name:</b> {{ st_base.field_id == 1 ? 'Campo Borti' : 'Hackaton Field' }}</h2>
+                        <p class="flex flex-col gap-1 mb-4"><b>Nation:</b> Brazil</p>
+                        <p class="flex flex-col gap-1 mb-4"><b>Province:</b> Sonora</p>
+                        <p class="flex flex-col gap-1 mb-4"><b>Climate:</b> Humid Subtropical</p>
+                        <p class="flex flex-col gap-1 mb-4"><b>Soil:</b> Rich in Phosphorus, Potassium, Calcium. Low in Sulfur</p>
+                        <p class="flex flex-col gap-1 mb-4"><b>Area:</b> 28.7 ha</p>
+                        <p class="flex flex-col gap-1 mb-4"><b>Coordinates:</b> -54.78900635427038, -17.53714270408995,</p>
+                        <p class="flex flex-col gap-1 mb-4"><b>Acquisition date:</b> 2024-02-20</p>
                     </div>
                 </div>  
             </div>
@@ -88,11 +92,17 @@
             >
                 <div class="flex flex-col gap-5">
                     
-                    <div>
-                        <h2 class="text-lg font-bold mb-1">Crop:</h2>
-                        <p class="text-sm text-gray-500">Progress: <b class="">50%</b></p>
-                        <p class="text-sm text-gray-500">Health: <b class="">50%</b></p>
-                        <p class="text-sm text-gray-500">Expected yield: <b class="">1000kg</b></p>
+                    <div class="flex flex-col gap-3">
+                        <p><b>Progress:</b> 50%</p>
+                        <p><b>Health:</b> 50%</p>
+                        <p><b>Type:</b> Crop Seed</p>
+                        <p><b>Growth Time:</b> 90-100 days</p>
+                        <p><b>Climate:</b> Temperate</p>
+                        <p><b>Soil Type:</b> Well-drained</p>
+                        <p><b>Use:</b> Food, Animal Feed, Oil</p>
+                        <p>
+                            A staple in agriculture, soybean seeds are the starting point for one of the most versatile crops worldwide. These seeds require a temperate climate and well-drained soil to thrive, blooming into plants that yield pods filled with nutritious beans. Soybeans are essential for both animal feed and a variety of human foods, offering a rich source of protein, fiber, and oil. Plant these in spring after the last frost, and prepare for a harvest that sustains both body and industry.
+                        </p>
                     </div>  
                 </div> 
                 
@@ -144,13 +154,15 @@
                         <div class=" flex flex-col gap-4">
                             <hr class="border-primary-800 mt-5">
                             <h2 class="text-lg font-bold mb-1">Information about <b class="text-warning-600">{{st_base.partial_selected_crops}}</b></h2>
+                            <p><b>Type:</b> Crop Seed</p>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, molestiae deserunt? Quam, aliquid eveniet doloribus alias, voluptas possimus accusamus porro ad minus sed repudiandae optio quis recusandae laboriosam non fugit?
+                                A staple in agriculture, soybean seeds are the starting point for one of the most versatile crops worldwide. These seeds require a temperate climate and well-drained soil to thrive, blooming into plants that yield pods filled with nutritious beans. Soybeans are essential for both animal feed and a variety of human foods, offering a rich source of protein, fiber, and oil. Plant these in spring after the last frost, and prepare for a harvest that sustains both body and industry.
                             </p>
                             <ul>
-                                <li><b>Price:</b> 100$</li>
-                                <li><b>Yield:</b> 1000kg</li>
-                                <li><b>Risk:</b> 50%</li>
+                                <li><b>Growth Time:</b> 90-100 days</li>
+                                <li><b>Climate:</b> Temperate</li>
+                                <li><b>Soil Type:</b> Well-drained</li>
+                                <li><b>Use:</b> Food, Animal Feed, Oil</li>
                             </ul>
                             <n-popconfirm
                                 positive-text="Yes" negative-text="No"

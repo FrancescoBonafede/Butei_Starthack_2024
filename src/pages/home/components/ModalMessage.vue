@@ -34,7 +34,7 @@
                         <h5 class="font-semibold absolute top-0 right-0 text-gray-900">{{ item.data }}</h5>
                         <h2 class="text-lg font-bold mb-1">{{ item.title }}:</h2>
                         <p class="text-sm text-gray-500">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum exercitationem vero sit, quae similique cumque porro obcaecati necessitatibus ad sapiente libero soluta vel a consequuntur laboriosam ducimus, repudiandae dicta animi?
+                            Congratulations! You have reached level 20. You have gained access to a wider variety of seeds, many of which require specific knowledge of the climate and your soil in order to yield the best harvest. Keep farming!
                         </p>
                         <hr class="border-primary-700 my-4">
                     </div>
@@ -69,7 +69,7 @@ let messages = computed(() => {
     let _messages = []
     if (st_base.selected_crops == '') {
         _messages.push({
-            title: 'No crop selected',
+            title: 'New crops unlocked!',
             message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum exercitationem vero sit, quae similique cumque porro obcaecati necessitatibus ad sapiente libero soluta vel a consequuntur laboriosam ducimus, repudiandae dicta animi?',
             data: '2024-03-21'
         })
