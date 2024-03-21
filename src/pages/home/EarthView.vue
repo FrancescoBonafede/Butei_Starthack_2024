@@ -93,3 +93,11 @@ onMounted(function () {
 	window.addEventListener("resize", handleWindowResize, false);
 });
 </script>
+
+<style>
+#earth canvas{
+	width: 100% !important;
+	height: 100vh !important;
+	object-fit: cover;
+}
+</style>

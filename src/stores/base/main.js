@@ -14,6 +14,9 @@ export default defineStore('base', {
     router: useRouter(),
     route: useRoute(),
 
+    selected_menu: "",
+
+
     title: "PINIA Base Store",
     force_loader: false,
     

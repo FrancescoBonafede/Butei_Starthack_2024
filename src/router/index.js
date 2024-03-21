@@ -14,12 +14,7 @@ const router = createRouter({
 				{
 					path: '',
 					name: 'home',
-					component: () => import('@/pages/home/EarthView.vue'),
-				},
-				{
-					path: 'earth',
-					name: 'earth',
-					component: () => import('@/pages/home/HomeView.vue'),
+					component: () => import('@/pages/home/TheHome.vue'),
 				},
 				{
 					path: '/:pathMatch(.*)*',
