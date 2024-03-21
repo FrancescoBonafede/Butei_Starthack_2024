@@ -65,7 +65,7 @@
                         <b class="text-success-800 capitalize text-lg">{{st_base.selected_crops}}</b>
                     </div>
                     <n-popconfirm
-                        positive-text="Yes" negative-text="No, not change"
+                        positive-text="Yes" negative-text="pene"
                         @positive-click="st_base.selected_crops = ''"
                     >
                         <template #trigger>
